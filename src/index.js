@@ -1,21 +1,12 @@
-
-/*
 require("dotenv").config();
 const fs = require('fs');
 
-*/
-/*
-try {
-const { Client, IntentsBitField } = require('discord.js');
+const Discord = require('discord.js');
 
-const myIntents = new IntentsBitField();
-myIntents.add(IntentsBitField.Flags.GuildPresences, IntentsBitField.Flags.GuildMembers);
-
-const client = new Client({ intents: myIntents });
-} catch(error) {
-    console.log
-}
-*/
+const client = new Discord.Client({ intents: [
+    Discord.GatewayIntentBits.Guilds,
+    Discord.GatewayIntentBits.GuildMessages
+  ]})
 
 console.log("Bot is starting...");
 
@@ -31,12 +22,6 @@ fs.readFile = ('test.txt', "utf8",(err, data) =>{
     console.log(data)
 });
 */
+client.login(token)
 
-/*
-try{
-    client.login(token)}
-catch (error) {
-    console.log(error)
-}
-*/
 console.log("Bot has started!");
